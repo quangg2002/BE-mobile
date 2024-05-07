@@ -63,4 +63,10 @@ public class StoreImpl implements StoreService{
         int totalRating = comments.stream().mapToInt(Comment::getRating).sum();
         return (double) totalRating / comments.size();
     }
+
+
+	@Override
+	public List<Store> getAllStores() {
+		return storeRepository.findAll();
+	}
 }

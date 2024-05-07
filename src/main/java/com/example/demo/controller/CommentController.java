@@ -76,7 +76,6 @@ public class CommentController {
 	@DeleteMapping("/comments/{commentId}")
 	public void deleteComment(@PathVariable String commentId) {
 		commentService.deleteComment(Long.valueOf(commentId));
-		
 		commentImageService.deleteCommentImage(Long.valueOf(commentId));
 	}
 }

@@ -6,4 +6,6 @@ import com.example.demo.entity.Store;
 
 public interface StoreService {
 	List<Store> getTopRatedStores();
+
+	List<Store> getAllStores();
 }

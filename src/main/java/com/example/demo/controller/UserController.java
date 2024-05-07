@@ -22,12 +22,14 @@ public class UserController {
 
 	@PostMapping("/login")
     public User login(@RequestBody User user) {
+		System.out.println(user.getPassword() + " " + user.getPhoneNumber());
         User existingUser = userService.findByPhoneNumber(user.getPhoneNumber());
 
         if (existingUser != null && existingUser.getPassword().equals(user.getPassword())) {
         	System.out.println(existingUser.getId() + " " + existingUser.getName() + " " + existingUser.getPhoneNumber());
             return existingUser;
         } else {
+        	System.out.println("sai tk mk");
             return null;
         }
     }

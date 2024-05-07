@@ -38,4 +38,9 @@ public class StoreController {
     public List<Store> getTopRatedStores() {
         return storeService.getTopRatedStores(); 
     }
+	
+	@GetMapping("/all-stores")
+	public List<Store> allStores() {
+		return storeService.getAllStores();
+    }
 }
